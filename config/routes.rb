@@ -1,4 +1,7 @@
 TheHUB::Application.routes.draw do
+  resources :content_items
+
+
   devise_for :users
 
   # The priority is based upon order of creation:
