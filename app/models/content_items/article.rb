@@ -1,3 +1,3 @@
-class Article < ContentIitem
+class Article < ContentItem
     attr_accessible :body
 end

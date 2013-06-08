@@ -2,7 +2,6 @@ class ContentItem < ActiveRecord::Base
   attr_accessible :author_id, :title, :type
 
   has_many :votes
-  has_many :comments
   
   class << self
     def new_with_cast(*a,&b)
