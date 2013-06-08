@@ -6,6 +6,7 @@
 #
 
 dave:
+    first_name: dave
     email: dave@yahoo.com
     type: Admin
 

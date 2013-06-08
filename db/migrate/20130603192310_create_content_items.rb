@@ -2,7 +2,7 @@ class CreateContentItems < ActiveRecord::Migration
   def change
     create_table :content_items do |t|
       t.string :title
-      t.integer :author_id
+      t.integer :user_id
             
       # Article columns
       t.text :body
