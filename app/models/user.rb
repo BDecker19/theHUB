@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :type
   # attr_accessible :title, :body
 
-  has_many :votes
+  has_many :likes, :foreign_key => 'liker_id'
   has_many :content_items, :foreign_key => 'author_id'
 
   class << self

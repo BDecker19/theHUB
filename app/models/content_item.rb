@@ -1,7 +1,7 @@
 class ContentItem < ActiveRecord::Base
   attr_accessible :author_id, :title, :type
 
-  has_many :votes, :as => :votable
+  has_many :likes, :as => :liked
   belongs_to :author, :class_name => 'User', :foreign_key => 'author_id'
   
   class << self

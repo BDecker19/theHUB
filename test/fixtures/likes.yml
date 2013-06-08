@@ -1,6 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-sampleVote:
-  author: dave
-  votable: newsPost
-  votable_type: Article
+Like1:
+  liker: Dave
+  liked: Post1
+  liked_type: Article

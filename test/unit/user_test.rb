@@ -3,7 +3,7 @@ require 'test_helper'
 class UserTest < ActiveSupport::TestCase
  
     def setup
-        @user = users(:dave)
+        @user = users(:Dave)
     end
 
     test "user created" do

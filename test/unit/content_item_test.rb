@@ -4,7 +4,7 @@ class ContentItemTest < ActiveSupport::TestCase
     
     def setup
         @content_item = content_items(:newsPost)
-        @user = users(:dave)
+        @user = users(:Dave)
     end
 
     test "content_item created" do

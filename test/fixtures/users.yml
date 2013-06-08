@@ -5,7 +5,7 @@
 # below each fixture, per the syntax in the comments below
 #
 
-dave:
+Dave:
     email: dave@yahoo.com
     type: Admin
 
