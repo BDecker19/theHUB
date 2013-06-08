@@ -13,7 +13,6 @@ class ContentItemTest < ActiveSupport::TestCase
     end
 
     test "author should show content_item" do
-        binding.pry
         assert_not_nil(@user.content_items[0], "author not showing items")
     end
 
