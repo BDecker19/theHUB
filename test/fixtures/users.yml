@@ -7,8 +7,7 @@
 
 dave:
     email: dave@yahoo.com
-    password: coolbeans
-    type: admin
+    type: Admin
 
 
 # two: {}

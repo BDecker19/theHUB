@@ -7,8 +7,8 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "user created" do
-        assert_equal(@user.email, "dave@yahoo.com", "Email correctly set")
-        binding.pry
+        assert_equal(@user.email, "dave@yahoo.com", "Email not set correctly")
+        assert_equal(@user.class, Admin, "Type not set correctly")
     end
 
 end
