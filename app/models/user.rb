@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   has_many :votes
-  has_many :content_items
+  has_many :content_items, :foreign_key => 'author_id'
 
   class << self
     def new_with_cast(*a,&b)
