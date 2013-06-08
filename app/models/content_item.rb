@@ -1,8 +1,8 @@
 class ContentItem < ActiveRecord::Base
-  attr_accessible :title, :type, :user_id
+  attr_accessible :author_id, :title, :type
 
-  has_many :votes, :as => :votable
-  belongs_to :User
+  has_many :votes
+  belongs_to :author, :class_name => 'User'
   
   class << self
     def new_with_cast(*a,&b)
