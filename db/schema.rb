@@ -11,18 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130603192310) do
+ActiveRecord::Schema.define(:version => 20130603211205) do
+
+  create_table "comments", :force => true do |t|
+    t.text     "content"
+    t.integer  "author_id"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "content_items", :force => true do |t|
     t.string   "title"
     t.integer  "author_id"
-    t.string   "type"
     t.text     "body"
     t.text     "intro"
     t.string   "url"
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "type"
   end
 
   create_table "users", :force => true do |t|
@@ -36,11 +45,20 @@ ActiveRecord::Schema.define(:version => 20130603192310) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "type"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "votes", :force => true do |t|
+    t.integer  "author_id"
+    t.integer  "votable_id"
+    t.string   "votable_type"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
 end

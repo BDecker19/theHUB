@@ -3,8 +3,7 @@ class CreateContentItems < ActiveRecord::Migration
     create_table :content_items do |t|
       t.string :title
       t.integer :author_id
-      t.string :type
-      
+            
       # Article columns
       t.text :body
       
@@ -16,6 +15,10 @@ class CreateContentItems < ActiveRecord::Migration
       t.text :description
 
       t.timestamps
+
+      ## Custom
+      t.string   :type
+
     end
   end
 end
