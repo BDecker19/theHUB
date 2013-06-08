@@ -2,9 +2,4 @@
 
 newsPost:
   title: News Title
-  author: dave
   type: Article
-
-# two:
-#   title: MyString
-#   author_id: 1
