@@ -1,7 +1,17 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  # called before every single test
+  def setup
+    @post = posts(:one)
+  end
+
+
+  test "admin creation" do
+    assert true
+  end
+
+
+
 end
