@@ -1,9 +1,13 @@
 TheHUB::Application.routes.draw do
+
+  root :to => "application#home"
+
+  post "search/results"
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
   resources :content_items
-
 
   devise_for :users
   ActiveAdmin.routes(self)
