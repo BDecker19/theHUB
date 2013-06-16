@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   has_many :likes, :foreign_key => 'liker_id'
   has_many :content_items, :foreign_key => 'author_id'
 
+  # borrowed code... TODO - comment up a bit!
   class << self
     def new_with_cast(*a,&b)
       if (h = a.first).is_a? Hash and (type = h[:type] || h['type']) and (klass = type.constantize) != self
