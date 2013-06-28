@@ -1,27 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="248771093">
-    <data-source source="LOCAL" name="Rails theHUB: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="59be957b-e2ca-4643-9bae-34a0155dae21">
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/db/test.sqlite3</jdbc-url>
+  <component name="DataSourceManagerImpl" format="xml" hash="2761588257">
+    <data-source source="LOCAL" name="Rails theHUB: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="278f0d4a-01da-4ad8-a557-5c235e0f8126">
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/dbtheHUB_prod</jdbc-url>
+      <user-name>Benji</user-name>
       <libraries>
         <library>
-          <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/mysql-connector-license.txt</url>
+          <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/postgresql-driver-license.txt</url>
         </library>
         <library>
-          <url>jar://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/mysql-connector-java-5.1.18-bin.jar!/</url>
+          <url>jar://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/postgresql-9.1-901.jdbc3.jar!/</url>
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails theHUB: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="ec49c328-aae9-4f85-bfdd-c976a171e038">
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/db/development.sqlite3</jdbc-url>
+    <data-source source="LOCAL" name="Rails theHUB: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="88d5dfae-fae1-4194-8010-0aa1539408bb">
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/theHUB_test</jdbc-url>
+      <user-name>Benji</user-name>
       <libraries>
         <library>
-          <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/mysql-connector-license.txt</url>
+          <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/postgresql-driver-license.txt</url>
         </library>
         <library>
-          <url>jar://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/mysql-connector-java-5.1.18-bin.jar!/</url>
+          <url>jar://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/postgresql-9.1-901.jdbc3.jar!/</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails theHUB: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="4c022799-154f-45ef-a856-e3213e33b463">
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/theHUB_dev</jdbc-url>
+      <user-name>Benji</user-name>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/postgresql-driver-license.txt</url>
+        </library>
+        <library>
+          <url>jar://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/postgresql-9.1-901.jdbc3.jar!/</url>
         </library>
       </libraries>
     </data-source>

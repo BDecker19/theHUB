@@ -4,6 +4,23 @@ class QueryTest < ActiveSupport::TestCase
 
     obj = self
 
+
+    # module SphinxHelpers
+    #   def index
+    #     ThinkingSphinx::Test.index
+    #     # Wait for Sphinx to finish loading in the new index files.
+    #     sleep 0.25 until index_finished?
+    #   end
+
+    #   def index_finished?
+    #     Dir[Rails.root.join(ThinkingSphinx::Test.config.searchd_file_path, '*.{new,tmp}.*')].empty?
+    #   end
+    # end
+
+
+    # # ---------------
+
+
     # before all
     def self.startup
       DatabaseCleaner.strategy = :truncation, {:only => tables}
@@ -20,7 +37,7 @@ class QueryTest < ActiveSupport::TestCase
 
     # after each
     def teardown
-       DatabaseCleaner.stop
+       DatabaseCleaner.clean
     end
 
     # after all
@@ -37,10 +54,10 @@ class QueryTest < ActiveSupport::TestCase
     test "search query gets results" do  
       ThinkingSphinx::Test.run do
         ThinkingSphinx::Test.index
-        get :index
-            :query => 'dave@yahoo.com'
         
-        assert [@article], assigns[:articles]
+        binding.pry
+        User.search "dave@yahoo.com"
+
       end
     end
 
