@@ -9,6 +9,6 @@ ThinkingSphinx::Index.define :user, :with => :active_record do
   # indexes articles.body, :as => :article_bodies
   # indexes author.name, :as => :author, :sortable => true
 
-  # # attributes
+  # attributes
   # has created_at, updated_at
 end

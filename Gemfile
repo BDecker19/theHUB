@@ -6,18 +6,20 @@ gem 'rails', '3.2.13'
 gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
 gem "jquery-ui-rails"
-gem 'mysql2',          '0.3.12b5'
+gem 'pg'
+gem 'mysql2', '~> 0.3.12b5'
+gem 'sqlite3'
 gem 'thinking-sphinx', '~> 3.0.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'devise'
 
 
 group :development, :test do
-  gem 'rspec-rails', '~> 2.0'
+#   gem 'rspec-rails', '~> 2.0'
+    gem 'database_cleaner'
 end
 
 

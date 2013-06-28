@@ -5,6 +5,7 @@ class ContentItemTest < ActiveSupport::TestCase
     def setup
         @content_item = content_items(:newsPost)
         @user = users(:Dave)
+        binding.pry
     end
 
     test "content_item created" do
