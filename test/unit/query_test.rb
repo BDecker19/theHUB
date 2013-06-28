@@ -53,10 +53,13 @@ class QueryTest < ActiveSupport::TestCase
 
     test "search query gets results" do  
       ThinkingSphinx::Test.run do
+        @user = users(:Dave)
+        @user.save 
+
         ThinkingSphinx::Test.index
-        
-        binding.pry
-        User.search "dave@yahoo.com"
+        @query_results = User.search "dave"
+
+        assert_equal(@query_results[0].email, "dave@yahoo.com")
 
       end
     end
