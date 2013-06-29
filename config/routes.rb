@@ -6,7 +6,6 @@ TheHUB::Application.routes.draw do
   post "likes/create"
 
   resources :content_items
-  resources :categories
 
   devise_for :users
 

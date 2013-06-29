@@ -20,18 +20,6 @@
     <%= f.number_field :author_id %>
   </div>
 
-  <% ###is this the right way to do this?  seems like there should be a helper method to do this for me? %>
-   <div class="field">
-      <% categories = Category.all
-      @category_array = []
-      categories.each {|category| @category_array << [category.name, category.id]} %>
-
-    <%= f.label :category %><br/>
-    <%= select_tag(:category_id, options_for_select(@category_array)) %>
-  </div>
-
-
-
   <div class="field">>
     <%= f.label :type %><br />
     <%= f.select :type, [ ["Article", "ContentItemArticle"], ["Link", "ContentItemLink"], ["Question", "ContentItemQuestion"] ]%>
