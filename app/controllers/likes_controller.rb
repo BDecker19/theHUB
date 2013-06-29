@@ -2,7 +2,10 @@ class LikesController < ApplicationController
  	
   # POST
   def create
+    
     @object_acted_on = params[:acted_on_type].constantize.find(params[:acted_on_id])
+
+    ### NOTE -- TODO... these should all probably go their respective models?
 
     # create new like
     @like = Like.new
