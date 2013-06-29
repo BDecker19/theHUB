@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130628222312) do
+ActiveRecord::Schema.define(:version => 20130629135758) do
 
   create_table "actions", :force => true do |t|
     t.integer  "actor_id"
@@ -19,13 +19,22 @@ ActiveRecord::Schema.define(:version => 20130628222312) do
     t.string   "action_product_type"
     t.integer  "acted_on_id"
     t.string   "acted_on_type"
+    t.integer  "relevancy_id"
+    t.integer  "relevancy_value"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "content_items", :force => true do |t|
     t.string   "title"
     t.integer  "author_id"
+    t.integer  "category_id"
     t.text     "body"
     t.text     "intro"
     t.string   "url"
@@ -47,6 +56,14 @@ ActiveRecord::Schema.define(:version => 20130628222312) do
     t.text     "text"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "relevancies", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "category_id"
+    t.integer  "score"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|

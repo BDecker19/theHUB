@@ -11,6 +11,11 @@
 </p>
 
 <p>
+  <b>Category:</b>
+  <%= @content_item.category %>
+</p>
+
+<p>
   <b>Likes:</b>
   <%= @content_item.likes.count %>
 </p>
@@ -18,9 +23,9 @@
 
 <% # LIKE ...### don't know if can skip to submit button, rather than using forms? %>
 <%= form_tag("/likes/create", :method => "post") do %>
-  <%= hidden_field_tag(:acted_on, @content_item.id) %>
-  <%= hidden_field_tag(:acted_on_type, "content_item") %>
-  <%#NOTE -- STI means above should prob be "@content_item.class"? Would then suppose have to interpret object category on other side...%>
+  <%= hidden_field_tag(:acted_on_id, @content_item.id) %>
+  <%= hidden_field_tag(:acted_on_type, @content_item.class.model_name) %>
+  <%#NOTE -- STI means above should prob be "@content_item.class"? Would then suppose have to interpret object category on other side (which can be done using "@content_item.class.model_name!" see method in model)...%>
   <%= submit_tag("Like") %>
 <% end %>
 

@@ -40,6 +40,7 @@ class ContentItemsController < ApplicationController
   # POST /content_items
   # POST /content_items.json
   def create
+
       case params[:content_item][:type]
         when "ContentItemArticle"
           @content_item = ContentItemArticle.new(params[:content_item])

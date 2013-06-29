@@ -12,5 +12,6 @@ class User < ActiveRecord::Base
   has_many :likes, :foreign_key => 'liker_id'
   has_many :actions, :foreign_key => 'actor_id'
   has_many :content_items, :foreign_key => 'author_id'
+  has_many :relevancies
 
 end

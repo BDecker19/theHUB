@@ -1,8 +1,11 @@
 class CreateContentItems < ActiveRecord::Migration
   def change
     create_table :content_items do |t|
+      
+      # Universal columns
       t.string :title
       t.integer :author_id
+      t.integer :category_id
             
       # Article columns
       t.text :body
