@@ -3,5 +3,6 @@ class Like < ActiveRecord::Base
 
   belongs_to :liked, :foreign_key => 'liked_id', :polymorphic => true
   belongs_to :liker, :class_name => 'User', :foreign_key => 'liker_id'
+  has_one :action, :foreign_key => 'action_product_id'
 
 end

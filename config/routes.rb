@@ -3,6 +3,7 @@ TheHUB::Application.routes.draw do
   root :to => "application#home"
 
   post "search/results"
+  post "likes/create"
 
   resources :content_items
 

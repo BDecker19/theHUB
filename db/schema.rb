@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130616094617) do
+ActiveRecord::Schema.define(:version => 20130628222312) do
+
+  create_table "actions", :force => true do |t|
+    t.integer  "actor_id"
+    t.integer  "action_product_id"
+    t.string   "action_product_type"
+    t.integer  "acted_on_id"
+    t.string   "acted_on_type"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
 
   create_table "content_items", :force => true do |t|
     t.string   "title"

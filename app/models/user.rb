@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   has_many :likes, :foreign_key => 'liker_id'
+  has_many :actions, :foreign_key => 'actor_id'
   has_many :content_items, :foreign_key => 'author_id'
 
   # borrowed code... TODO - comment up a bit!

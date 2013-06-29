@@ -11,5 +11,14 @@
 </p>
 
 
+<% # LIKE ...### don't know if can skip to submit button, rather than using forms? %>
+<%= form_tag("/likes/create", :method => "post") do %>
+  <%= hidden_field_tag(:acted_on, @content_item.id) %>
+  <%= hidden_field_tag(:acted_on_type, "content_item") %>
+  <%#NOTE -- STI means above should prob be "@content_item.class"? Would then suppose have to interpret object category on other side...%>
+  <%= submit_tag("Like") %>
+<% end %>
+
+
 <%= link_to 'Edit', edit_content_item_path(@content_item) %> |
 <%= link_to 'Back', content_items_path %>
