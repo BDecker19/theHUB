@@ -9,13 +9,9 @@ class LikesControllerTest < ActionController::TestCase
 
 
   test "should create like" do
-    post :create, :acted_on => @content_item.id, :acted_on_type => "content_item"
+    post :create, {:acted_on => @content_item.id, :acted_on_type => "content_item"}
     binding.pry
+    # assert_equal (@like.liked_id, @content_item.id)
   end
-
-  # test "should create action" do
-  #   post :create, :acted_on => @content_item.id, :acted_on_type => "content_item"
-  #   assert_equal (
-  # end
 
 end
