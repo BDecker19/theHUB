@@ -40,9 +40,10 @@ class ContentItemsController < ApplicationController
   # POST /content_items
   # POST /content_items.json
   def create
-    @content_item = ContentItem.new(:type => "Article")
+    @content_item = ContentItem.new(:type => "ArticleContentItem")
     @content_item.title = "test2"
     @content_item.author_id = 1
+    binding.pry
     @content_item.save
 
     respond_to do |format|

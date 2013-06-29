@@ -17,7 +17,7 @@ class CreateContentItems < ActiveRecord::Migration
       t.timestamps
 
       ## Custom
-      t.string   :type
+      t.string :type
 
     end
   end
