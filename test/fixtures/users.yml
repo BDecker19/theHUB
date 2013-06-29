@@ -7,7 +7,12 @@
 
 Dave:
     email: dave@yahoo.com
-    type: Admin
+    type: UserAdmin
+	id: 1
+	encrypted_password: abcdef1
+	password_salt:  efvfvffdv
+	confirmed_at: <%= Time.now %>
+
 
 
 # two: {}

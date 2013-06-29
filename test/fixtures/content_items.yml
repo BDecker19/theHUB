@@ -3,7 +3,7 @@
 Post1:
   title: Title1
   author: Dave
-  type: Article
+  type: ContentItemArticle
 
 # two:
 #   title: MyString

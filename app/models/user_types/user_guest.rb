@@ -1,0 +1,2 @@
+class UserGuest < User
+end

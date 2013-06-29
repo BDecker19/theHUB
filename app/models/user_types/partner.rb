@@ -1,2 +1,0 @@
-class Partner < User
-end

@@ -21,7 +21,7 @@
   </div>
   <div class="field">>
     <%= f.label :type %><br />
-    <%= f.select :type, ["Article", "Link", "Question"] %>
+    <%= f.select :type, [ ["Article", "ContentItemArticle"], ["Link", "ContentItemLink"], ["Question", "ContentItemQuestion"] ]%>
   </div>
   <div class="actions">
     <%= f.submit %>

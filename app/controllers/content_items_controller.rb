@@ -40,11 +40,16 @@ class ContentItemsController < ApplicationController
   # POST /content_items
   # POST /content_items.json
   def create
-    @content_item = ContentItem.new(:type => "ArticleContentItem")
-    @content_item.title = "test2"
-    @content_item.author_id = 1
-    binding.pry
-    @content_item.save
+      case params[:content_item][:type]
+        when "ContentItemArticle"
+          @content_item = ContentItemArticle.new(params[:content_item])
+        when "ContentItemLink"
+          @content_item = ContentItemLink.new(params[:content_item])
+        when "ContentItemQuestion"
+          @content_item = ContentItemQuestion.new(params[:content_item])
+        else
+          raise "Unknown content_item type!"
+      end
 
     respond_to do |format|
       if @content_item.save
