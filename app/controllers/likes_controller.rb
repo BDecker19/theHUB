@@ -15,6 +15,9 @@ class LikesController < ApplicationController
      @action.acted_on_id = params[:acted_on]
      @action.acted_on_type = params[:acted_on_type]
      @action.save
+  
+     redirect_to "/#{params[:acted_on_type]}s/#{params[:acted_on]}"
+
   end
 end
 
