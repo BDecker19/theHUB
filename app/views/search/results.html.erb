@@ -1,5 +1,9 @@
 <h1>Search Results</h1>
 
-<% @results.each do |user| %>
-  <p> <%= user.email %> </p>
+<%if !@results.empty? %>
+	<% @results.each do |user| %>
+		<p> <%= user.email %> </p>
+	<% end %>
+<% else %>
+	<p> No results found! </p>
 <% end %>
