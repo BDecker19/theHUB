@@ -9,7 +9,6 @@ class SearchController < ApplicationController
   	# retrieve direct results
   	@results = User.search params[:search]
 
-
   	# determine relevancy category ### hacked for now...
   	@category_id = 1
 
