@@ -8,21 +8,17 @@ class LikesController < ApplicationController
     ### NOTE -- TODO... these should all probably go their respective models?
 
     # create new like
-    @like = Like.new
-    @like.liker_id = current_user.id
-    @like.liked_id = @object_acted_on.id 
-    @like.liked_type = @object_acted_on.type #stores subclass, not parent class (for parent, use ".class.model_name") 
+    @like = Like.new :liker_id => current_user.id, :liked_id => @object_acted_on.id, :liked_type => @object_acted_on.type
+        # uses 'constructor' gem ### is there any reason NOT to use this??
+        # likedtype stores subclass, not parent class (for parent, use ".class.model_name") 
     @like.save
 
     # create action
-    @action = Action.new
-    @action.actor_id = current_user.id
-    @action.action_product_id = @like.id
-    @action.action_product_type = "like"  ###matters referred to explicitly rather than via 'class.name'?
-    @action.acted_on_id = @object_acted_on.id #ditto previous note on storing subclass
-    @action.acted_on_type = @object_acted_on.type
-    @action.relevancy_value = 1 # custom value associated with like action ###should be converted to class variable -- see http://bit.ly/15RgiuK
-    
+    @action = Action.new :actor_id => current_user.id, :action_product_id => @like.id, :action_product_type => "like",  :acted_on_id => @object_acted_on.id, :acted_on_type => @object_acted_on.type, :relevancy_value => 1
+        ### action_product_type... matters referred to explicitly rather than via 'class.name'?
+        # acted_on_type... ditto previous note on storing subclass
+        # relevancy_value... custom value associated with like action ###should be converted to class variable -- see http://bit.ly/15RgiuK
+
     # update or create relevancy
         #check if user already has relevancy for category
         if(!current_user.relevancies.select{|relevancy| relevancy.category_id == @object_acted_on.category_id}.empty?)
